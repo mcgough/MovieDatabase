@@ -1,0 +1,20 @@
+<% include ../partials/header1 %>
+
+
+<form action="/favorites/comments" method="POST" role="form" class='comment-submit-form'>
+  <legend>Couch List Comments</legend>
+
+  <div class="form-group">
+    <input type='hidden' value='<%= id %>' name='id'>
+    <input type="textarea" name='comment' class="form-control" id="comment-input" placeholder="Add comment here">
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+<% include ../partials/footer %>

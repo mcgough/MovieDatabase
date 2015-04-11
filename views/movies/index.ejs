@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<h2 class='text-center search-results'>Movie Search Results</h2>
+<hr>
+<table class="table search-list">
+  <thead>
+    <tr>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Search.forEach(function(item,idx){ %>
+      <% if(Search[idx].Type === 'movie') { %>
+    <tr>
+      <td class='search-list'><a href='/movies/<%= Search[idx].imdbID %>' class='title-list-result'><%= Search[idx].Title %><span class='small small-year'> (<%= Search[idx].Year %>)</span></a></td>
+    </tr>
+      <% } %>
+    <% }) %>
+  </tbody>
+</table>
+<div class="row">
+    <p class='text-center back-button'><a href="javascript:history.go(-1)" class='btn btn-default back-btn'>Back</a></p>
+  </div>
+
+<% include ../partials/footer %>
+
+
+
