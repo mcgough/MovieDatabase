@@ -1,4 +1,6 @@
 # MovieCouch
+Timeline: 3 days
+
 MovieCouch was one of the first apps I built. 
 
 It utilizes Node, ExpressJS, Twitter Bootstrap, jQuery, and the OMDB api.
