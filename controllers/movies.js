@@ -6,11 +6,12 @@ var db = require('../models');
 router.get('/',function(req,res){
   var query = req.query.q;
   var url = 'http://www.omdbapi.com/?s=' + query;
+  console.log('here!!!!!!!!',query);
   request(url,function(error,response,data){
     if(!error && response.statusCode === 200) {
       var parsedMovies = JSON.parse(data);
       var objResults = parsedMovies.Search;
-      console.log(objResults);
+      console.log('#######',objResults);
       // res.send(parsedMovies);
       if(parsedMovies.Search) {
         res.render('movies/index',parsedMovies);
