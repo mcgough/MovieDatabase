@@ -1,5 +1,4 @@
 "use strict";
-
 var fs        = require("fs");
 var path      = require("path");
 var Sequelize = require("sequelize");
@@ -9,6 +8,7 @@ var config    = require(__dirname + '/../config/config.json')[env];
 // NEEDED FOR HEROKU ///////////
 if(config.use_env_variable){
   var db_info = process.env[config.use_env_variable].match(/([^:]+):\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
+  console.log('#######',db_info);
   config.dialect=db_info[1];
   config.username=db_info[2];
   config.password=db_info[3];
