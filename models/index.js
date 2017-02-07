@@ -15,7 +15,7 @@ if(config.use_env_variable){
   config.host=db_info[4];
   config.port=db_info[5];
   config.database=db_info[6];
-  console.log('!!!!!',config);
+  console.log('!!!!',config);
 }
 //////////////////////////////
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
