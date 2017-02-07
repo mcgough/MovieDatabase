@@ -8,19 +8,16 @@ var config    = require(__dirname + '/../config/config.json')[env];
 // NEEDED FOR HEROKU ///////////
 if(config.use_env_variable){
   var db_info = process.env[config.use_env_variable].match(/([^:]+):\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
-  console.log('#######',db_info);
   config.dialect=db_info[1];
   config.username=db_info[2];
   config.password=db_info[3];
   config.host=db_info[4];
   config.port=db_info[5];
   config.database=db_info[6];
-  console.log('!!!!',config);
 }
 //////////////////////////////
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
 
-console.log('DB!!!!!!!!!!!',sequelize);
 var db        = {};
 
 fs
