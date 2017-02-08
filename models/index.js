@@ -1,5 +1,4 @@
 "use strict";
-console.log('######models/index.js');
 var fs        = require("fs");
 var path      = require("path");
 var Sequelize = require("sequelize");

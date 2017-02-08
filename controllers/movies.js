@@ -18,6 +18,8 @@ router.get('/',function(req,res){
       }else{
         res.render('movies/error');
       }
+    } else {
+      console.log('error!!!',error,response.statusCode);
     }
   })
 })
