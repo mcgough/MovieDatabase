@@ -27,7 +27,7 @@ router.get('/',function(req,res){
 
 router.get('/:id',function(req,res){
   var id = req.params.id;
-  var url = 'http://www.omdbapi.com/?i=' + id + '&plot=full&tomatoes=true';
+  var url = 'http://www.omdbapi.com/?i=' + id + '&plot=short&tomatoes=true';
   request(url,function(error,response,data){
     if(!error && response.statusCode === 200) {
       console.log(data);
@@ -42,6 +42,8 @@ router.get('/:id',function(req,res){
           res.render('movies/show', parsedMovieInfo);
         }
       });
+    } else {
+      console.log('error', response.statusCode);
     }
   })
 })
