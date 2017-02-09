@@ -5,8 +5,9 @@ var db = require('../models');
 
 router.get('/',function(req,res){
   var query = req.query.q;
-  var url = 'http://www.omdbapi.com/?s=' + query;
+  var url = 'http://www.omdbapi.com/?s=' + encodeURIComponent(query);
   console.log('here!!!!!!!!',query);
+  console.log(url);
   request(url,function(error,response,data){
     if(!error && response.statusCode === 200) {
       var parsedMovies = JSON.parse(data);

@@ -12,9 +12,9 @@ router.post('/',function(req,res){
 
 router.get('/index',function(req,res){
   db.favorite.findAll().then(function(favs){
-    db.comment.findAll().then(function(comment){
-      res.render('favorites/index', {list:favs,comments:comment});
-    })
+      res.render('favorites/index', {list:favs});
+    // db.comment.findAll().then(function(comment){
+    // })
   })
 })
 
