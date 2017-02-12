@@ -1,19 +1,23 @@
-<% include partials/header1.ejs %>
+<% include partials/header.ejs %>
 
   <div class='row home'>
-    <h1 class='text-center'>MovieCouch</h1>
-    <h4 class='text-center'>Where are you sitting tonight?</h4>
+    <div class="overlay"></div>
+    <div class='content'>
+      <h1 class='text-center'>MovieCouch</h1>
+      <h4 class='text-center'>Where are you sitting tonight?</h4>
+      <form action="/movies" method="get" role="form" class='home-search-form'>
+        <div class="form-group">
+          <input type="text" name='q' class="form-control home-input" id="" placeholder="Search for a movie" autofocus>
+          <div class="loading">
+            <img src="/images/loadingAnimation.gif">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary home-btn">Search<div class="circle"></div><div class="handle"></div></button>
+        <!-- <a href='/favorites/index' class='btn btn-success couch-list-home'>Couch List</a> -->
+      </form>
+    </div>
   </div>
-  <div class='row text-center'>
-    <form action="/movies" method="get" role="form" class='text-center'>
-      <div class="form-group">
-        <input type="text" name='q' class="form-control home-input" id="" placeholder="Search for a movie" autofocus>
-      </div>
-      <button type="submit" class="btn btn-primary home-btn">Submit</button>
-      <a href='/favorites/index' class='btn btn-success couch-list-home'>Couch List</a>
-    </form>
 
-  </div>
 
 
 

@@ -1,28 +1,22 @@
 <% include ../partials/header %>
 
 <h2 class='text-center search-results'>Movie Search Results</h2>
-<hr>
-<table class="table search-list">
-  <thead>
-    <tr>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% Search.forEach(function(item,idx){ %>
-      <% if(Search[idx].Type === 'movie') { %>
-    <tr>
-      <td class='search-list'><a href='/movies/<%= Search[idx].imdbID %>' class='title-list-result'><%= Search[idx].Title %><span class='small small-year'> (<%= Search[idx].Year %>)</span></a></td>
-    </tr>
+  <div class="row movies-container">
+    <% Search.forEach(function(item){ %>
+      <% if (item.Type === 'movie' && item.Poster !== 'N/A' ) { %>
+    <div class="movie">
+      <a href='/movies/<%= item.imdbID %>' class='title-list-result'>
+        <img src="<%= item.Poster %>">
+      </a>
+    </div>
       <% } %>
     <% }) %>
-  </tbody>
-</table>
-<div class="row">
-    <p class='text-center back-button'><a href="javascript:history.go(-1)" class='btn btn-default back-btn'>Back</a></p>
   </div>
+<div class="row">
+<% include ../partials/button %>
+</div>
 
-<% include ../partials/footer.ejs %>
+<% include ../partials/footer %>
 
 
 

@@ -1,5 +1,25 @@
 $(function(){
 
+  function cardFlip() {
+    var $card = $(this).parent();
+    if ($card.hasClass('flip')) {
+      return $card.removeClass('flip');
+    } else {
+      return $card.addClass('flip');
+    }
+  }
+
+  $('.home-search-form').on('submit', function() {
+    $(this).addClass('fading');
+    $('.loading').addClass('visible');
+  })
+
+  $('.movie-display .poster').on('click', cardFlip);
+  $('.movie-display .details').on('click', cardFlip);
+
+
+
+
   if($('.poster').attr('src') === 'N/A') {
     $('.show-add').hide();
     $('.show-remove').hide();
