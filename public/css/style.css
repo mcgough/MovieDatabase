@@ -259,6 +259,7 @@ a:hover {
   z-index: -10;
 }
 #wrapper {
+  overflow-x: hidden;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
