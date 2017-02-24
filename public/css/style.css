@@ -572,7 +572,7 @@ h2.search-results {
   -ms-flex-align: center;
   -ms-align-items: center;
   align-items: center;
-  height: 88vh;
+  height: 90vh;
   width: 55vh;
   margin: auto;
   margin-top: 55px;
@@ -606,14 +606,16 @@ h2.search-results {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
+  margin-bottom: 10%;
 }
 .movie-display.flip {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
 }
 .movie-display .poster {
+  overflow: hidden;
   cursor: pointer;
   width: 55vh;
   -webkit-backface-visibility: hidden;
@@ -673,7 +675,7 @@ h2.search-results {
 .back-btn {
   width: 80px;
   margin: auto;
-  margin-top: 60px;
+  margin-bottom: 5%;
   position: relative;
   overflow: hidden;
   display: -webkit-flex;

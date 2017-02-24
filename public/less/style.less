@@ -207,8 +207,8 @@ h2.search-results {
 	.flex-display();
 	.flex-direction(column);
 	.justify-content(center);
-	.align-items(center);  
-	height: 88vh;
+	.align-items(center);
+	height: 90vh;
 	width: 55vh;
 	margin: auto;
 	margin-top: 55px;
@@ -225,16 +225,18 @@ h2.search-results {
 	.justify-content(center);
 	.align-items(center);
 	.transition(all .5s);
+	margin-bottom: 10%;
 	&.flip {
-	  .transform(rotateY(180deg)); 
+	  .transform(rotateY(-180deg));
 	}
 	.poster {
+		overflow: hidden;
 		cursor: pointer;
 		width: 55vh;
 		.backface-visibility(hidden);
 		img {
 			width: 100%;
-		} 
+		}
 	}
 	.details {
 		position: absolute;
@@ -248,7 +250,7 @@ h2.search-results {
 		.justify-content(center);
 
 		.backface-visibility(hidden);
-	  .transform(rotateY(180deg)); 
+	  .transform(rotateY(180deg));
 	  .detail,.title {
 	  	width: 80%;
 	  	margin: auto;
@@ -266,7 +268,7 @@ h2.search-results {
 .back-btn {
 	width: 80px;
 	margin: auto;
-	margin-top: 60px;
+	margin-bottom: 5%;
 	position: relative;
 	overflow: hidden;
 	.flex-display();
@@ -299,7 +301,7 @@ h2.search-results {
 			}
 		}
 	}
-		
+
 	&:hover {
 		p {
 			position: relative;
