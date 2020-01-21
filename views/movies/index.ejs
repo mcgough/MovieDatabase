@@ -1,22 +1,18 @@
 <% include ../partials/header %>
 
-<h2 class='text-center search-results'>Movie Search Results</h2>
-  <div class="row movies-container">
-    <% Search.forEach(function(item){ %>
-      <% if (item.Type === 'movie' && item.Poster !== 'N/A' ) { %>
-    <div class="movie">
-      <a href='/movies/<%= item.imdbID %>' class='title-list-result'>
-        <img src="<%= item.Poster %>">
-      </a>
-    </div>
-      <% } %>
-    <% }) %>
+<h2 class="text-center search-results">Movie Search Results</h2>
+<div class="row movies-container">
+  <% Search.forEach(function(item){ %> <% if (item.Type === 'movie' &&
+  item.Poster !== 'N/A' ) { %>
+  <div class="movie">
+    <a href="/movies/<%= item.imdbID %>" class="title-list-result">
+      <img src="<%= item.Poster %>" />
+    </a>
   </div>
+  <% } %> <% }) %>
+</div>
 <div class="row">
-<% include ../partials/button %>
+  <% include ../partials/button %>
 </div>
 
 <% include ../partials/footer %>
-
-
-

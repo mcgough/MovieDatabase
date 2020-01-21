@@ -1,87 +1,92 @@
 <% include ../partials/header %>
 
-
-<div class='row'>
-  <h2 class='text-center search-results'>Couch List</h2>
+<div class="row">
+  <h2 class="text-center search-results">Couch List</h2>
 </div>
-<hr>
-  <div class='row text-center'>
+<hr />
+<div class="row text-center">
   <div class="col-md-12">
-   <ul class='fav-list '>
-  <% list.forEach(function(items){ %>
-    <li class='fav-list-item block-center'>
-      <a class='btn' data-toggle="modal" href='#modal-id-<%= items.id %>'>
-        <img src="<%= items.poster %>" class='thumbnail' alt="movie poster">
-      </a>
-      <div class="modal fade" id="modal-id-<%= items.id %>">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h3 class='modal-title'><%= items.title %></h3>
-              <img src='<%= items.poster %>'class='modal-poster'>
+    <ul class="fav-list ">
+      <% list.forEach(function(items){ %>
+      <li class="fav-list-item block-center">
+        <a class="btn" data-toggle="modal" href="#modal-id-<%= items.id %>">
+          <img src="<%= items.poster %>" class="thumbnail" alt="movie poster" />
+        </a>
+        <div class="modal fade" id="modal-id-<%= items.id %>">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-hidden="true"
+                >
+                  &times;
+                </button>
+                <h3 class="modal-title"><%= items.title %></h3>
+                <img src="<%= items.poster %>" class="modal-poster" />
+              </div>
+              <div class="modal-body">
+                <h4 class="add-comment">Couch Quotes...</h4>
+                <%comments.forEach(function(comments){ %> <%
+                if(comments.favoriteId === items.id){ %>
+                <h4 class="user-comment">"<%= comments.comment %>"</h4>
+
+                <% } %> <% }) %>
+              </div>
+              <div class="modal-footer">
+                <form
+                  action="/favorites/couchcomments"
+                  method=""
+                  class="form-inline text-center couch-input"
+                  role="form"
+                >
+                  <div class="form-group">
+                    <label class="sr-only" for="">label</label>
+                    <input type="hidden" name="id" value="<%= items.id %>" />
+                    <input
+                      type="text"
+                      name="couchcomment"
+                      class="form-control couchcomment"
+                      placeholder="Couch Quote here"
+                      autofocus
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary couch-comment-submit"
+                  >
+                    Submit
+                  </button>
+                </form>
+                <a class="btn btn-default" href="/movies/<%= items.imdbid %>"
+                  >Info</a
+                >
+                <a
+                  class="btn btn-danger fav-remove"
+                  href="/favorites/<%= items.id %>"
+                  ><i class="glyphicon glyphicon-trash"></i
+                ></a>
+              </div>
             </div>
-            <div class="modal-body">
-                <h4 class='add-comment'>Couch Quotes...</h4>
-              <%comments.forEach(function(comments){ %>
-                <% if(comments.favoriteId === items.id){ %>
-                  <h4 class='user-comment'>"<%= comments.comment %>"</h4>
-
-                <% } %>
-              <% }) %>
-            </div>
-            <div class="modal-footer">
-              <form action="/favorites/couchcomments" method="" class="form-inline text-center couch-input" role="form">
-
-                <div class="form-group">
-                  <label class="sr-only" for="">label</label>
-                  <input type='hidden' name='id' value='<%= items.id %>'>
-                  <input type="text" name='couchcomment' class="form-control couchcomment" placeholder="Couch Quote here" autofocus>
-                </div>
-
-
-
-                <button type="submit" class="btn btn-primary couch-comment-submit">Submit</button>
-              </form>
-              <a class='btn btn-default' href="/movies/<%= items.imdbid %>">Info</a>
-              <a class='btn btn-danger fav-remove' href='/favorites/<%= items.id %>'><i class='glyphicon glyphicon-trash'></i></a>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-    </li>
-  <% }) %>
-   </ul>
-   </div>
-   </div>
-   <div class="row">
-    <p class='text-center back-button'><a href="javascript:history.go(-1)" class='btn btn-default back-btn'>Back</a></p>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+      </li>
+      <% }) %>
+    </ul>
   </div>
+</div>
+<div class="row">
+  <p class="text-center back-button">
+    <a href="javascript:history.go(-1)" class="btn btn-default back-btn"
+      >Back</a
+    >
+  </p>
+</div>
 
 <% include ../partials/footer %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

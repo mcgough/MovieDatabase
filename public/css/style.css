@@ -32,7 +32,7 @@
 
 .container {
   width: 80%;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 #sofa {
   width: 70px;
@@ -47,8 +47,8 @@ hr {
   margin: auto;
 }
 .home-page {
-  font-family: 'Libre Baskerville', serif;
-  background-image: url('http://www.trbimg.com/img-538f92c1/turbine/redeye-tv-binge-watching-time-sleep-killer-201-001/750/750x422');
+  font-family: "Libre Baskerville", serif;
+  background-image: url("http://www.trbimg.com/img-538f92c1/turbine/redeye-tv-binge-watching-time-sleep-killer-201-001/750/750x422");
   background-repeat: no-repeat;
   background-position: center;
   /*background-attachment: fixed;*/
@@ -56,12 +56,12 @@ hr {
   min-height: 820px;
 }
 h1 {
-  font-family: 'Vidaloka', serif;
+  font-family: "Vidaloka", serif;
   font-size: 60px;
   margin-top: 4em;
 }
 h4 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 25px;
 }
 .home-input {
@@ -81,13 +81,13 @@ h4 {
 }
 /*Search Results Page*/
 .search-results {
-  font-family: 'Vidaloka', serif;
+  font-family: "Vidaloka", serif;
   font-size: 4em;
 }
 .search-list {
   width: 80%;
   font-size: 20px;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   margin: auto;
   margin-top: 0;
   margin-bottom: 0;
@@ -113,13 +113,13 @@ h4 {
 p {
   letter-spacing: 1px;
   margin-bottom: 15px;
-  font-family: 'Pontano Sans', sans-serif;
+  font-family: "Pontano Sans", sans-serif;
 }
 #last-p {
   padding-top: 5px;
 }
 .key {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: bold;
 }
 .tomato {
@@ -131,7 +131,7 @@ p {
   float: left;
 }
 .back-btn {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   color: black;
 }
 .back-btn:hover {
@@ -180,7 +180,7 @@ a:hover {
   outline: none !important;
 }
 .modal-title {
-  font-family: 'Vidaloka', serif;
+  font-family: "Vidaloka", serif;
 }
 .modal-poster {
   width: 100px;
@@ -196,17 +196,17 @@ a:hover {
 }
 .modal-footer {
   text-align: center;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 .add-comment {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 .add-comment {
   font-size: 1.5em;
   margin-bottom: 1em;
 }
 .user-comment {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 1em;
   margin-top: 1em;
 }
@@ -214,7 +214,7 @@ a:hover {
 .error {
   margin-top: 100px;
   margin-bottom: 25px;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 .cover {
@@ -253,7 +253,7 @@ a:hover {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-image: url('http://www.trbimg.com/img-538f92c1/turbine/redeye-tv-binge-watching-time-sleep-killer-201-001/750/1200x600');
+  background-image: url("http://www.trbimg.com/img-538f92c1/turbine/redeye-tv-binge-watching-time-sleep-killer-201-001/750/1200x600");
   background-size: cover;
   background-position: 50% 50%;
   z-index: -10;
@@ -321,7 +321,7 @@ a:hover {
   width: 100%;
   height: 100vh;
   margin: auto;
-  font-family: 'Vidaloka', serif;
+  font-family: "Vidaloka", serif;
 }
 .row.home .overlay {
   position: absolute;
